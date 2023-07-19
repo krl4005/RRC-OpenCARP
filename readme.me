@@ -1,1 +1,11 @@
+#RRC openCARP
 
+This repository calculates RRC values using both myokit and openCARP for various to ensure that the there is no discrepency. 
+
+First, I calculated RRC for various models to confirm that my findings are consistent to that reported in “Validation of quantitative measure of repolarization reserve as a novel marker of drug induced proarrhythmia” by Guar et al. For Mahajan-Shiferaw (UCLA), Fox-Gilmour (FOX), ten Tusscher-Panfilov (TT), and O'Hara-Rudy (ORd) the results were indeed consistent between myokit, openCARP, and the values reported in Guar et al. For the Grandi model, I was able to calculate consistent values to the Guar et al. paper using both myokit and openCARP when I did not pace to steady state (~0.42 A/F). 
+
+When I did pace to steady-state, as the methods describe, I got a much reduced RRC value in both openCARP and myokit (~0.3 A/F) than that reported. For the Shannon model, I am unfortunately still finding a discrepancy between the RRC value the Guar et al. paper reports, and the value I found.  The paper reports a value of about 1 A/F for the Shannon model, but I found a value of about ~0.75 A/F in both myokit and openCARP after pacing to steady-state.
+
+These findings can be found in the run_models.ipynb notebook.
+
+Data is required to run scripts in that notebook. Download the data folder using the following path on oneDrive: Christini Lab/Reserach Data/rrc-opencarp data/data
